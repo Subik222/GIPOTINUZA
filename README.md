@@ -1,1 +1,2 @@
 # GIPOTINUZA
+print("Привіт пупсік")

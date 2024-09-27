@@ -5,5 +5,5 @@ class Marik:
         self.super_time_save_world = super_time_save_world
 
     def printe(self):
-        """Виведення інформації про супергероя"""
-        return print(f"Супергерой: {self.super_name}, Суперсила: {self.super_power}, Кількість мобілізованих: {self.super_time_save_world}")
+        """Виведення інформації про ТЦК"""
+        return print(f"Воєнком: {self.super_name}, Суперсила: {self.super_power}, Кількість мобілізованих: {self.super_time_save_world}")

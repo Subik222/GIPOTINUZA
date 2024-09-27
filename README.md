@@ -23,11 +23,10 @@ def choose_social_media():
             print("Неправильний вибір! Будь ласка, виберіть з 1, 2 або 3.")
 def simulate_data_collection(social_media):
     print(f"\nШукаємо дані по {social_media}...")
-    for i in range(1, 101):  # Процес від 1% до 100%
+    for i in range(1, 101):
         print(f"Збір даних: {i}%", end='\r')
         time.sleep(random.uniform(0.05, 0.1)) 
     print("\nІнформація зібрана!")
-# Функція для вибору мобілізації
 def mobilize_choice():
     print("\nЧи слід мобілізувати користувача?")
     while True:
@@ -40,7 +39,6 @@ def mobilize_choice():
             break
         else:
             print("Неправильний вибір! Будь ласка, введіть 'так' або 'ні'.")
-# Основна програма
 def main():
     name = input("Введіть ім'я користувача: ")
     social_media = choose_social_media()  

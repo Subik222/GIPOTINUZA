@@ -117,3 +117,73 @@ for i in range(9):
     button.grid(row=i // 3, column=i % 3)
     buttons.append(button)
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def computer_guess_game():
+    low = 1
+    high = 100
+    attempts = 0
+    input("Загадайте число від 1 до 100. Натисніть Enter, коли будете готові.")
+
+    while low <= high:
+        attempts += 1
+        guess = (low + high) // 2  # Комп'ютер вгадує число
+        print(f"Комп'ютер вгадує: {guess}")
+
+        feedback = input("Якщо число більше введіть '+', якщо менше введіть '-', якщо правильно — '=': ")
+
+        if feedback == "=":
+            print(f"Комп'ютер вгадав ваше число за {attempts} спроб!")
+            return attempts
+        elif feedback == "+":
+            low = guess + 1
+        elif feedback == "-":
+            high = guess - 1
+        else:
+            print("Будь ласка, введіть лише '+', '-' або '='.")
+
+def main():
+    best_score = None
+    worst_score = None
+
+    while True:
+        score = computer_guess_game()
+
+        if best_score is None or score < best_score:
+            best_score = score
+        if worst_score is None or score > worst_score:
+            worst_score = score
+
+        print(f"Найкращий результат: {best_score}")
+        print(f"Найгірший результат: {worst_score}")
+
+        play_again = input("Чи хочете зіграти ще раз? (так/ні): ").lower()
+        if play_again != "так":
+            break
+
+if __name__ == "__main__":
+    main()

@@ -22,7 +22,7 @@ def tic_tac_toe():
 
         move = int(input())
 
-        if board[move] == 0:  # Якщо клітинка порожня (0)
+        if board[move] == 0:
             board[move] = player
         else:
             print("Клітинка зайнята cпробуйте знову")
